@@ -36,7 +36,7 @@ import com.springboot.entity.Employee;
 
 		@Override
 		public String updateEmployee(Employee emp) {
-			boolean result=dao.existsById(emp.getId());
+			boolean result=dao.exists(emp.getId());
 			if(result) {
 				dao.save(emp);
 				return "updated the emp details";
